@@ -1,12 +1,12 @@
-name: 'Container Action Template'
-description: 'Get started with Container actions'
-author: 'GitHub'
+name: 'packer'
+description: 'Packer'
+author: 'fergusn'
 inputs: 
-  myInput:
-    description: 'Input to use'
-    default: 'world'
+  template:
+    description: 'Packer template'
 runs:
   using: 'docker'
-  image: 'Dockerfile'
+  image: 'docker://hashicorp/packer'
   args:
-    - ${{ inputs.myInput }}
+  - build
+  - ${{ inputs.template }}

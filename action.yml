@@ -6,7 +6,7 @@ inputs:
     description: 'Packer template'
 runs:
   using: 'docker'
-  image: 'docker://hashicorp/packer'
+  image: 'docker://fergusn/packer'
   args:
   - build
   - ${{ inputs.template }}
